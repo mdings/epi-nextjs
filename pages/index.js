@@ -1,15 +1,14 @@
 import Link from 'next/link'
-import { Box, Container, Layout} from '../components'
-import styles from '../styles/index.module.sass'
+import { Box, Container, Layout, Tout} from '../components'
 
 export default function({data}) {
     return (
         <Layout>
-            <header className={styles['primary-tout']}>
+            <Tout>
                 <Box padding="large">
                     <img src="/mosey-logo.svg" />
                 </Box>
-            </header>
+            </Tout>
             <h1>Hello world {data.totalMatching}!!</h1>
             <ul>
                 {data.results.map(item => (
