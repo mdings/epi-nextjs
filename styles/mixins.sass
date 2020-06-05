@@ -1,0 +1,19 @@
+// there is no multiline in pure sass :(
+$spacing: ('none': 0px, 'gutter': 24px, 'xxsmall': 4px,  'xsmall': 8px,  'small': 16px, 'medium': 24px, 'large': 32px, 'xlarge': 48px, 'xxlarge': 64px)
+
+@mixin spacing
+    @each $name, $value in $spacing
+        &.spacing--#{$name}
+            & > * + *
+                padding-top: $value
+        
+@mixin full-height-pseudo-block
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+
+

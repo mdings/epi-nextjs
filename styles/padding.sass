@@ -1,0 +1,5 @@
+$spacing: ('none': 0px, 'gutter': 24px, 'xxsmall': 4px,  'xsmall': 8px,  'small': 16px, 'medium': 24px, 'large': 32px, 'xlarge': 48px, 'xxlarge': 64px)
+
+@each $name, $value in $spacing
+    .padding--#{$name}
+        padding: $value

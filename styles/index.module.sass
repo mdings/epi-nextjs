@@ -1,0 +1,39 @@
+@import "./vendor/include-media"
+@import "./mixins.sass"
+@import "./functions.sass"
+
+.primary-tout
+    height: 50vh
+    width: 100%
+    background-image: url(/brunel-johnson-QCPXRvl9Ylc-unsplash.jpg)
+    background-size: cover
+    background-position-x: center
+    background-position-y: background-focus(4, 25, 50)
+    position: relative
+
+    @include media(">=tablet")
+        height: 75vh
+        min-height: 600px
+
+    &:before
+        @include full-height-pseudo-block
+        background-image: linear-gradient(to bottom, rgba(#000, .1) 0%, rgba(#000, .4) 100%)
+
+    &:after
+        @include full-height-pseudo-block
+        width: 90%
+        left: 50%
+        transform: translateX(-50%)
+        background-image: url(/stylist-home-header-text-1.png)
+        background-size: 100%
+        background-position: bottom center
+        background-repeat: no-repeat
+        
+        @include media(">=desktop")
+            width: 60%
+
+    img
+        position: relative
+        z-index: 9
+        width: 210px
+        height: auto
