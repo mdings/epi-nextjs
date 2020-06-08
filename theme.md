@@ -1,1 +1,1 @@
-https://themes.muffingroup.com/be/stylist/
+https://themes.gohugo.io/theme/twenty-twenty-hugo/
