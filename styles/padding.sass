@@ -3,3 +3,8 @@ $spacing: ('none': 0px, 'gutter': 24px, 'xxsmall': 4px,  'xsmall': 8px,  'small'
 @each $name, $value in $spacing
     .padding--#{$name}
         padding: $value
+
+@each $name, $value in $spacing
+    .spacing--#{$name}
+        & > * + *
+                margin-top: $value

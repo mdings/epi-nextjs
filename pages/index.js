@@ -1,14 +1,16 @@
+import css from './index.module.sass'
 import Link from 'next/link'
-import { Box, Container, Layout, Tout} from '../components'
+import { Box, Button, Center, Container, Layout, Stack, Tout} from '../components'
 
 export default function({data}) {
     return (
         <Layout>
-            <Tout>
-                <Box padding="large">
-                    <img src="/mosey-logo.svg" />
-                </Box>
+            <Tout image="naeim-jafari-svQZUVLOLjM-unsplash.jpg">
+                <h1>This is how to make use of the spring collection</h1>
             </Tout>
+            <div className="introduction">
+                <h1>Hi there</h1>
+            </div>
             <h1>Hello world {data.totalMatching}!!</h1>
             <ul>
                 {data.results.map(item => (
@@ -24,7 +26,7 @@ export default function({data}) {
 }
 
 export async function getServerSideProps(context) {
-    const res = await fetch(`https://foundation-nextjs.epi-demo.nl/api/episerver/v2.0/search/content/?filter=ContentType/any(t:t eq 'BlogItemPage')&orderby=created desc&bust=${new Date().getTime()}`, {
+    const res = await fetch(`https://foundation-nextjs.epi-demo.nl/api/episerver/v2.0/search/content/?filter=ContentType/any(t:t eq 'BlogItemPage')&orderby=created desc`, {
         headers: {
             'Accept': 'application/json',
             'Accept-Language': 'en'

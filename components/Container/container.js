@@ -1,8 +1,8 @@
-import styles from './container.module.sass'
+import css from './container.module.scss'
 
 export function Container ({ children }) {
     return (
-        <div className={styles['c-container']}>
+        <div className={css['c-container']}>
             {children}
         </div>
     )
