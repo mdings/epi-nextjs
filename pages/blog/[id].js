@@ -17,7 +17,7 @@ export async function getStaticProps({ params }) {
     }
 }
 
-// So Next.js first ones to know all of our id that are going to be passed through the wildcard
+// So Next.js first once to know all of our id that are going to be passed through the wildcard
 export async function getStaticPaths() {
     const paths = await getContentIds()
     return { paths, fallback: false }

@@ -15,7 +15,7 @@ export default function({data}) {
             <ul>
                 {data.results.map(item => (
                     <li key={item.contentLink.id}>
-                        <Link href="/blog/[item.routeSegment]" as={`/blog/${item.routeSegment}`}>
+                        <Link href="/blog/[id]" as={`/blog/${item.routeSegment}`}>
                             <a>{item.name}</a>
                         </Link>
                     </li>
