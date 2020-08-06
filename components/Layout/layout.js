@@ -1,16 +1,22 @@
+import React from 'react'
 import css from './layout.module.scss'
 import { Box } from '../../components'
 
-export function Layout ({children}) {
+export class Layout extends React.Component {
+    componentDidMount() {
+        console.log('I was mounted man')
+    }
 
-    return (
-        <div className={css['c-layout']}>
-            <nav className={css['nav--main']}> 
-                <Box padding="small">
-                    <img src="/mosey-logo.svg" alt="Mosey logo" />
-                </Box>
-            </nav>
-            {children}
-        </div>
-    )
+    render() {
+        return (
+            <div className={css['c-layout']}>
+                <nav className={css['nav--main']}>
+                    <Box padding="small">
+                        <img src="/mosey-logo.svg" alt="Mosey logo" />
+                    </Box>
+                </nav>
+                {this.props.children}
+            </div>
+        )
+    }
 }

@@ -1,6 +1,7 @@
 import css from './index.module.sass'
-import Link from 'next/link'
-import { Box, Button, Center, Container, Layout, Stack, Tout} from '../components'
+import { Blogpost, Box, Button, Center, Columns, Container, Layout, Stack, Tout} from '../components'
+
+
 
 export default function({data}) {
     return (
@@ -12,15 +13,22 @@ export default function({data}) {
                 <h1>Hi there</h1>
             </div>
             <h1>Hello world {data.totalMatching}!!</h1>
-            <ul>
+            <Columns>
+                {data.results.map(item => (
+                    <Blogpost post={item} key={item.contentLink.id} />
+                ))}
+            </Columns>
+            {/* <ul>
                 {data.results.map(item => (
                     <li key={item.contentLink.id}>
+                        <img src={ReplacePath(item.pageImage?.value?.url)} />
                         <Link href="/blog/[id]" as={`/blog/${item.routeSegment}`}>
                             <a>{item.name}</a>
                         </Link>
+                        <span>{item.teaserText.value}</span>
                     </li>
                 ))}
-            </ul>
+            </ul> */}
         </Layout>
     )
 }
@@ -33,6 +41,7 @@ export async function getServerSideProps(context) {
         }
     })
     const data = await res.json()
+    console.log(data)
     return {
         props: { data }
     }
