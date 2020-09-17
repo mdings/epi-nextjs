@@ -1,24 +1,38 @@
 @import "../../styles/vendor/include-media"
 
-.primary-tout
+.Tout
     text-align: center
     top: 0
     left: 0
     width: 100vw
-    background-color: #fff
+    background-image: linear-gradient(to bottom, #fff calc(100% - 15rem), var(--bg-color) calc(100% - 15rem))
     padding-top: 140px
 
     h1 
         font-weight: 800
         font-feature-settings: "lnum"
         font-variant-numeric: lining-nums
-        letter-spacing: -2px
+        letter-spacing: -0.2rem
+        padding: 0 3rem
         line-height: 1
-        font-size: 4.6rem
+        font-size: 5.4rem
 
     @include media(">=tablet")
 
-.primary-tout__bg
+.Tout__background
     background-size: cover
     height: 670px
     width: 100%
+
+.Tout__teaser
+    font-family: 'Roboto Slab', serif
+    letter-spacing: -0.09rem
+    font-size: 2rem
+    font-weight: 300
+    font-style: italic
+
+    span
+        background-image: linear-gradient(to right, var(--bg-color) 0%, var(--bg-color) 100%)
+        background-position: 0 calc(100% - 0px)
+        background-repeat: repeat-x
+        background-size: 100% 1rem

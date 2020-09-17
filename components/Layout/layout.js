@@ -4,7 +4,7 @@ import { Box } from '../../components'
 
 export class Layout extends React.Component {
     componentDidMount() {
-        console.log('I was mounted man')
+        console.info('Mounting the layout component')
     }
 
     render() {
