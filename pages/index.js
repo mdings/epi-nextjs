@@ -8,7 +8,7 @@ export default function({data}) {
     console.log(firstPost)
     return (
         <Layout>
-            <Tout image={firstPost.pageImage?.value?.url} title={firstPost.name} created={firstPost.created}>
+            <Tout post={firstPost}>
                 {firstPost.teaserText.value}
             </Tout>
 

@@ -8,6 +8,15 @@
     background-image: linear-gradient(to bottom, #fff calc(100% - 15rem), var(--bg-color) calc(100% - 15rem))
     padding-top: 140px
 
+    a
+        text-decoration: none
+        color: inherit
+
+        &:hover
+
+            h1 
+                span
+                    background-size: 100% 1rem
     h1 
         font-weight: 800
         font-feature-settings: "lnum"
@@ -16,6 +25,14 @@
         padding: 0 3rem
         line-height: 1
         font-size: 5.4rem
+
+        span
+            transition: all 150ms ease-in-out
+            background-image: linear-gradient(to right, var(--bg-color) 0%, var(--bg-color) 100%)
+            background-position: 0 calc(100% - 0px)
+            background-repeat: repeat-x
+            background-size: 0% 1rem
+        
 
     @include media(">=tablet")
 

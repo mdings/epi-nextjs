@@ -1,14 +1,11 @@
-.c-button {
+.Button {
     display: inline-block;
-    background-color: #000;
-    color: #fff;
+    // background-color: #000;
+    border: 2px solid black;
+    padding: 12px 18px;
+    // color: #fff;
     font-size: 16px;
-    border: none;
+    // border: none;
     outline: none;
     transition: all 150ms ease-in-out;
-
-    &:hover {
-        background-color: #b34d00;
-
-    }
 }
